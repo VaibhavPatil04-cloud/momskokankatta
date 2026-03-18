@@ -1,16 +1,17 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, Clock, ExternalLink, PhoneCall } from "lucide-react";
+import { MapPin, Phone, Clock, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ContactPreview = () => (
   <section id="contact" className="relative w-full overflow-hidden bg-gradient-to-b from-[#0b0b0b] via-[#0d0d0d] to-[#0b0b0b] py-[140px] lg:py-[180px] px-6">
-    
+
     {/* Subtle Glow & Background Map Texture */}
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none z-0" />
     <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-0 select-none">
       <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1"/>
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill="url(#grid)" />
@@ -33,7 +34,7 @@ const ContactPreview = () => (
       </motion.div>
 
       <div className="grid grid-cols-12 gap-6 lg:gap-8 max-w-[1200px] mx-auto">
-        
+
         {/* Large Address Card */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -51,17 +52,17 @@ const ContactPreview = () => (
             <h3 className="font-display text-2xl font-semibold text-white mb-4">Location</h3>
             <p className="font-body text-lg text-gray-300 leading-relaxed mb-1">123 Heritage Road</p>
             <p className="font-body text-gray-400 mb-10">Mumbai, Maharashtra 400001</p>
-            
+
             <div className="mt-auto">
-              <motion.a
-                href="#"
-                whileHover={{ y: -3 }}
-                className="group/btn relative inline-flex items-center gap-3 px-8 py-4 rounded-full border border-primary/20 text-xs uppercase tracking-[0.2em] font-body text-primary font-bold overflow-hidden transition-all duration-500 hover:border-primary"
-              >
-                <div className="absolute inset-0 bg-primary translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:translate-y-0" />
-                <span className="relative z-10 transition-colors duration-500 group-hover/btn:text-black">Get Directions</span>
-                <ExternalLink className="relative z-10 w-3 h-3 group-hover/btn:text-black transition-colors" />
-              </motion.a>
+              <Link to="/contact" className="w-full sm:w-auto">
+                <motion.button
+                  whileHover={{ y: -5 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full px-10 py-5 rounded-full text-[10px] uppercase tracking-[0.3em] font-bold bg-primary text-black hover:bg-white transition-all duration-500"
+                >
+                  Get Directions
+                </motion.button>
+              </Link>
             </div>
           </div>
         </motion.div>
@@ -83,16 +84,17 @@ const ContactPreview = () => (
             <h3 className="font-display text-xl font-semibold text-white mb-4">Phone</h3>
             <p className="font-body text-gray-300 mb-1">+91 98765 43210</p>
             <p className="font-body text-gray-400 text-sm mb-10">info@vrundavan.com</p>
-            
+
             <div className="mt-auto">
-              <motion.a
-                href="#"
-                whileHover={{ y: -3 }}
-                className="group/btn relative inline-flex items-center justify-center w-12 h-12 rounded-full border border-primary/20 text-primary overflow-hidden transition-all duration-500 hover:border-primary"
-              >
-                <div className="absolute inset-0 bg-primary translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:translate-y-0" />
-                <PhoneCall className="relative z-10 w-4 h-4 group-hover/btn:text-black transition-colors" />
-              </motion.a>
+              <Link to="/contact" className="w-full sm:w-auto">
+                <motion.button
+                  whileHover={{ y: -5 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full px-10 py-5 rounded-full text-[10px] uppercase tracking-[0.3em] font-bold border border-white/20 text-white hover:bg-white hover:text-black transition-all duration-500"
+                >
+                  Send Message
+                </motion.button>
+              </Link>
             </div>
           </div>
         </motion.div>
@@ -113,8 +115,8 @@ const ContactPreview = () => (
             </div>
             <h3 className="font-display text-xl font-semibold text-white mb-4">Timing</h3>
             <p className="font-body text-gray-300 text-sm mb-1 font-medium">Mon – Sun</p>
-            <p className="font-body text-gray-400 text-sm mb-10 leading-relaxed">11 AM – 11 PM<br/>Kitchen closes 10:30</p>
-            
+            <p className="font-body text-gray-400 text-sm mb-10 leading-relaxed">11 AM – 11 PM<br />Kitchen closes 10:30</p>
+
             <div className="mt-auto w-12 h-12 flex items-center justify-center border border-white/5 rounded-full text-white/20">
               <span className="text-[10px] uppercase tracking-widest font-bold">Closed</span>
             </div>

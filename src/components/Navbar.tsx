@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -13,11 +15,11 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { label: "Home", href: "#" },
-    { label: "Menu", href: "#menu" },
-    { label: "About", href: "#about" },
-    { label: "Gallery", href: "#gallery" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "Menu", href: "/menu" },
+    { label: "Our Story", href: "/about" },
+    { label: "Gallery", href: "/gallery" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -30,7 +32,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto h-full flex items-center justify-between px-6 lg:px-8">
-        <a href="#" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img 
             src={logo} 
             alt="Vrundavan Logo" 
@@ -38,30 +40,40 @@ const Navbar = () => {
               scrolled ? "h-[75px]" : "h-[100px]"
             }`} 
           />
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-10">
           {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="font-body text-sm uppercase tracking-[0.15em] text-muted-foreground hover:text-primary transition-colors duration-300"
-            >
-              {link.label}
-            </a>
+            link.href.startsWith("/#") ? (
+              <a
+                key={link.label}
+                href={link.href}
+                className="font-body text-sm uppercase tracking-[0.15em] text-muted-foreground hover:text-primary transition-colors duration-300"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.label}
+                to={link.href}
+                className={`font-body text-sm uppercase tracking-[0.15em] transition-colors duration-300 ${
+                  pathname === link.href ? "text-primary" : "text-muted-foreground hover:text-primary"
+                }`}
+              >
+                {link.label}
+              </Link>
+            )
           ))}
         </div>
 
         <div className="hidden md:block">
-          <motion.a
-            href="#contact"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.98 }}
+          <Link
+            to="/reserve"
             className="inline-block px-6 py-2.5 rounded-full text-sm uppercase tracking-[0.15em] font-body font-medium text-primary ring-1 ring-primary/40 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
           >
             Reserve Table
-          </motion.a>
+          </Link>
         </div>
 
         {/* Mobile burger */}
@@ -83,22 +95,35 @@ const Navbar = () => {
           className="md:hidden glass-nav py-8 px-6"
         >
           {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="block py-3 font-body text-sm uppercase tracking-[0.15em] text-muted-foreground hover:text-primary transition-colors"
-            >
-              {link.label}
-            </a>
+            link.href.startsWith("/#") ? (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="block py-3 font-body text-sm uppercase tracking-[0.15em] text-muted-foreground hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.label}
+                to={link.href}
+                onClick={() => setMobileOpen(false)}
+                className={`block py-3 font-body text-sm uppercase tracking-[0.15em] transition-colors ${
+                  pathname === link.href ? "text-primary" : "text-muted-foreground hover:text-primary"
+                }`}
+              >
+                {link.label}
+              </Link>
+            )
           ))}
-          <a
-            href="#contact"
+          <Link
+            to="/reserve"
             onClick={() => setMobileOpen(false)}
             className="inline-block mt-4 px-6 py-2.5 rounded-full text-sm uppercase tracking-[0.15em] font-body font-medium text-primary ring-1 ring-primary/40"
           >
             Reserve Table
-          </a>
+          </Link>
         </motion.div>
       )}
     </motion.nav>

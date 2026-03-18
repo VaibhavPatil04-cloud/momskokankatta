@@ -1,19 +1,20 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   const highlights = ["Family Friendly", "Authentic Taste", "Quick Service", "Premium Ambience"];
 
   return (
     <section className="relative w-full overflow-hidden bg-gradient-to-b from-[#0b0b0b] via-[#111111] to-[#0b0b0b] py-[140px] lg:py-[180px] px-6">
-      
+
       {/* Soft Vignette Effect */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.6)_100%)] pointer-events-none z-0" />
 
       {/* Floating Decorative Shapes INSIDE Section Background (Middle Layer) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        
+
         {/* Top Left: Small Abstract Curve */}
-        <motion.svg 
+        <motion.svg
           initial={{ y: 0, rotate: -10 }}
           animate={{ y: [-15, 15, -15], rotate: [0, -5, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
@@ -25,7 +26,7 @@ const CTASection = () => {
         </motion.svg>
 
         {/* Top Right: Medium Pizza Slice */}
-        <motion.svg 
+        <motion.svg
           initial={{ y: 0, rotate: -20 }}
           animate={{ y: [-10, 10, -10], rotate: [-20, -10, -20] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
@@ -39,7 +40,7 @@ const CTASection = () => {
         </motion.svg>
 
         {/* Bottom Left: Large Faded Roti Shape */}
-        <motion.svg 
+        <motion.svg
           initial={{ y: 0, rotate: 15 }}
           animate={{ y: [20, -20, 20], rotate: [10, 25, 10] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }}
@@ -48,11 +49,11 @@ const CTASection = () => {
         >
           <circle cx="50" cy="50" r="40" strokeDasharray="10 6" />
           <path d="M50 10 Q60 50 90 50" strokeLinecap="round" />
-          <circle cx="70" cy="70" r="3" fill="currentColor" opacity="0.6"/>
+          <circle cx="70" cy="70" r="3" fill="currentColor" opacity="0.6" />
         </motion.svg>
 
         {/* Bottom Right: Subtle Sparkle */}
-        <motion.svg 
+        <motion.svg
           initial={{ y: 0, rotate: 0 }}
           animate={{ y: [10, -10, 10], rotate: [-5, 5, -5] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
@@ -98,33 +99,31 @@ const CTASection = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             {/* Primary Button */}
-            <motion.a
-              href="#contact"
-              whileHover={{ 
-                y: -5,
-                boxShadow: "0 20px 40px rgba(201, 168, 106, 0.2)"
-              }}
-              whileTap={{ scale: 0.98 }}
-              className="group relative inline-flex items-center px-12 py-5 rounded-full text-sm uppercase tracking-[0.25em] font-body font-semibold border border-primary/30 text-primary overflow-hidden transition-all duration-700 hover:border-primary"
-            >
-              <div className="absolute inset-0 bg-primary translate-y-full transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0" />
-              <span className="relative z-10 transition-colors duration-700 group-hover:text-black">
-                Reserve Table
-              </span>
-            </motion.a>
+            <Link to="/reserve" className="group">
+              <motion.button
+                whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(201, 168, 106, 0.2)" }}
+                whileTap={{ scale: 0.98 }}
+                className="relative px-12 py-5 rounded-full text-xs uppercase tracking-[0.3em] font-body font-bold border border-primary/30 text-primary overflow-hidden transition-all duration-700 hover:border-primary"
+              >
+                <div className="absolute inset-0 bg-primary translate-y-full transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0" />
+                <span className="relative z-10 transition-colors duration-700 group-hover:text-black">
+                  Reserve Table
+                </span>
+              </motion.button>
+            </Link>
 
             {/* Secondary Button */}
             <motion.a
               href="#contact"
-              whileHover={{ 
+              whileHover={{
                 y: -5,
-                boxShadow: "0 20px 40px rgba(201, 168, 106, 0.1)"
+                boxShadow: "0 20px 40px rgba(201, 168, 106, 0.2)"
               }}
               whileTap={{ scale: 0.98 }}
-              className="group relative inline-flex items-center px-12 py-5 rounded-full text-sm uppercase tracking-[0.25em] font-body font-semibold border border-white/10 text-white/80 overflow-hidden transition-all duration-700 hover:border-primary/40 hover:text-white"
+              className="group relative inline-flex items-center px-12 py-5 rounded-full text-xs uppercase tracking-[0.3em] font-body font-bold border border-primary/30 text-primary overflow-hidden transition-all duration-700 hover:border-primary"
             >
-              <div className="absolute inset-0 bg-white/5 translate-y-full transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0" />
-              <span className="relative z-10">
+              <div className="absolute inset-0 bg-primary translate-y-full transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0" />
+              <span className="relative z-10 transition-colors duration-700 group-hover:text-black">
                 Contact Us
               </span>
             </motion.a>

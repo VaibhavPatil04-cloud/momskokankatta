@@ -1,14 +1,15 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import heroImg from "@/assets/hero.png";
 import hero1Img from "@/assets/hero1.png";
 import hero2Img from "@/assets/hero2.png";
 import { Star } from "lucide-react";
 
 const slides = [
-  { image: heroImg, title: "Every Bite.\nA New Experience.", subtitle: "Indulge your senses with our carefully curated menu.", cta: "Book Your Experience", href: "#contact" },
-  { image: hero1Img, title: "A Place to\nRelax & Enjoy.", subtitle: "Unwind in an atmosphere of unparalleled elegance and warmth.", cta: "Visit Us", href: "#contact" },
-  { image: hero2Img, title: "Great Food.\nGreat Company.", subtitle: "Experience authentic flavors in a premium setting.", cta: "View Menu", href: "#menu" }
+  { image: heroImg, title: "Every Bite.\nA New Experience.", subtitle: "Indulge your senses with our carefully curated menu.", cta: "Book Your Experience", href: "/reserve" },
+  { image: hero1Img, title: "A Place to\nRelax & Enjoy.", subtitle: "Unwind in an atmosphere of unparalleled elegance and warmth.", cta: "Visit Us", href: "/contact" },
+  { image: hero2Img, title: "Great Food.\nGreat Company.", subtitle: "Experience authentic flavors in a premium setting.", cta: "View Menu", href: "/menu" }
 ];
 
 const HeroSection = () => {
@@ -92,12 +93,12 @@ const HeroSection = () => {
               transition={{ delay: 0.6, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="mt-10"
             >
-              <a
-                href={slide.href}
+              <Link
+                to={slide.href}
                 className="inline-block px-10 py-4 text-sm uppercase tracking-[0.2em] font-body font-medium bg-primary text-primary-foreground hover:shadow-[0_0_25px_rgba(201,168,106,0.6)] transition-all duration-500 pointer-events-auto"
               >
                 {slide.cta}
-              </a>
+              </Link>
             </motion.div>
           </motion.div>
         </AnimatePresence>
