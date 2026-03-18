@@ -7,45 +7,123 @@ import hero2 from "@/assets/hero2.png";
 import featureDining from "@/assets/feature-dining.jpg";
 
 const images = [
-  { src: gallery1, span: "col-span-2 row-span-1" },
-  { src: gallery2, span: "col-span-1 row-span-2" },
-  { src: gallery3, span: "col-span-1 row-span-1" },
-  { src: gallery4, span: "col-span-1 row-span-1" },
-  { src: hero2, span: "col-span-1 row-span-1" },
-  { src: featureDining, span: "col-span-1 row-span-1" },
+  { src: gallery1, span: "col-span-2 row-span-1", title: "Dining Experience" },
+  { src: gallery2, span: "col-span-1 row-span-2", title: "Warm Ambience" },
+  { src: gallery3, span: "col-span-1 row-span-1", title: "Signature Dishes" },
+  { src: gallery4, span: "col-span-1 row-span-1", title: "Luxury Interior" },
+  { src: hero2, span: "col-span-1 row-span-1", title: "Chef's Selection" },
+  { src: featureDining, span: "col-span-1 row-span-1", title: "Elegant Seating" },
 ];
 
 const GallerySection = () => (
-  <section id="gallery" className="py-32 lg:py-48 px-6">
-    <div className="container mx-auto">
+  <section id="gallery" className="relative w-full overflow-hidden bg-[#080808] py-[140px] lg:py-[180px] px-6">
+    
+    {/* Subtle Background Glow */}
+    <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+
+    <div className="container relative z-10 mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="text-center mb-20"
+        className="text-center mb-24"
       >
-        <p className="font-body text-xs uppercase tracking-[0.3em] text-primary mb-4">Visual Journey</p>
-        <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight text-foreground">
+        <p className="font-body text-sm uppercase tracking-[0.4em] text-primary mb-4 font-medium italic">Visual Journey</p>
+        <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white mb-6">
           Our Gallery
         </h2>
+        <div className="w-24 h-[1px] bg-primary/30 mx-auto" />
       </motion.div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[250px]">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 auto-rows-[250px] lg:auto-rows-[320px]">
         {images.map((img, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ delay: i * 0.08, duration: 0.6 }}
-            className={`${img.span} rounded-[20px] overflow-hidden group cursor-pointer relative`}
+            transition={{ delay: i * 0.1, duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            whileHover="hover"
+            className={`${img.span} rounded-[24px] overflow-hidden group cursor-pointer relative shadow-[0_20px_50px_rgba(0,0,0,0.6)]`}
           >
-            <img src={img.src} alt="Gallery" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-            <div className="absolute inset-0 bg-background/0 group-hover:bg-background/40 transition-colors duration-500" />
+            {/* Image Layer */}
+            <motion.img 
+              src={img.src} 
+              alt={img.title} 
+              variants={{
+                hover: { 
+                  scale: 1.08,
+                  transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] }
+                }
+              }}
+              className="w-full h-full object-cover" 
+            />
+            
+            {/* Default Dark Overlay */}
+            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition-colors duration-700" />
+            
+            {/* Gradient Reveal */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+            {/* Text Overlay */}
+            <div className="absolute inset-0 flex flex-col justify-end p-8 pointer-events-none">
+              <motion.span
+                variants={{
+                  hover: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }
+                  }
+                }}
+                initial={{ opacity: 0, y: 20 }}
+                className="font-body text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-1"
+              >
+                Vrundavan
+              </motion.span>
+              <motion.h3
+                variants={{
+                  hover: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }
+                  }
+                }}
+                initial={{ opacity: 0, y: 20 }}
+                className="font-display text-xl lg:text-2xl text-white font-medium"
+              >
+                {img.title}
+              </motion.h3>
+            </div>
           </motion.div>
         ))}
       </div>
+
+      {/* Premium CTA Button */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.4, duration: 0.8 }}
+        className="mt-24 text-center"
+      >
+        <motion.a
+          href="#"
+          whileHover={{ 
+            y: -5,
+            boxShadow: "0 20px 40px rgba(201, 168, 106, 0.2)"
+          }}
+          whileTap={{ scale: 0.98 }}
+          className="group relative inline-flex items-center px-12 py-5 rounded-full text-sm uppercase tracking-[0.25em] font-body font-semibold border border-primary/30 text-primary overflow-hidden transition-all duration-700 hover:border-primary"
+        >
+          {/* Fill Animation Layer */}
+          <div className="absolute inset-0 bg-primary translate-y-full transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0" />
+          
+          <span className="relative z-10 transition-colors duration-700 group-hover:text-black">
+            Explore Our Moments
+          </span>
+        </motion.a>
+      </motion.div>
     </div>
   </section>
 );

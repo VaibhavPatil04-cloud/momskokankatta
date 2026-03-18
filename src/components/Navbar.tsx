@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -25,12 +26,18 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "glass-nav h-16" : "h-20 bg-transparent"
+        scrolled ? "glass-nav h-24" : "h-32 bg-transparent"
       }`}
     >
       <div className="container mx-auto h-full flex items-center justify-between px-6 lg:px-8">
-        <a href="#" className="font-display text-2xl text-primary tracking-tight">
-          Vrundavan
+        <a href="#" className="flex items-center">
+          <img 
+            src={logo} 
+            alt="Vrundavan Logo" 
+            className={`transition-all duration-500 object-contain ${
+              scrolled ? "h-[75px]" : "h-[100px]"
+            }`} 
+          />
         </a>
 
         {/* Desktop links */}
