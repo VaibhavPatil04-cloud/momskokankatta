@@ -8,6 +8,7 @@ import ExperienceSection from "@/components/ExperienceSection";
 import CTASection from "@/components/CTASection";
 import ContactPreview from "@/components/ContactPreview";
 import Footer from "@/components/Footer";
+import GudhiPadwaCelebration from "@/components/GudhiPadwaCelebration";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
@@ -21,7 +22,9 @@ const Index = () => (
     <CTASection />
     <ContactPreview />
     <Footer />
+    <GudhiPadwaCelebration />
   </div>
 );
+
 
 export default Index;
