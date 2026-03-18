@@ -123,10 +123,10 @@ const MenuPreview = () => {
                   transition={isMobile ? { duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] } : undefined}
                   className="space-y-4"
                 >
-                  <p className="font-body text-sm text-gray-300 leading-relaxed max-w-[220px] mx-auto">
+                  <p className="inline-flex items-center text-xs uppercase tracking-[0.2em] font-body text-primary font-semibold">
                     {c.desc}
                   </p>
-                  <span className="inline-flex items-center text-xs uppercase tracking-[0.2em] font-body text-primary font-semibold">
+                  {/* <span className="inline-flex items-center text-xs uppercase tracking-[0.2em] font-body text-primary font-semibold">
                     Explore Menu
                     <motion.span
                       variants={{
@@ -136,7 +136,7 @@ const MenuPreview = () => {
                     >
                       →
                     </motion.span>
-                  </span>
+                  </span> */}
                 </motion.div>
               </div>
             </motion.div>
