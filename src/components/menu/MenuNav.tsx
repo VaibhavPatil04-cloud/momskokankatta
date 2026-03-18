@@ -35,8 +35,8 @@ const MenuNav = ({ categories, activeCategory, onCategoryClick }: MenuNavProps) 
             : "opacity-0 pointer-events-none bg-transparent border-b border-transparent"
         )}
       >
-        <div className="container mx-auto px-6 h-full flex items-center justify-center">
-          <div className="flex items-center justify-center overflow-x-auto no-scrollbar gap-4 md:gap-8 w-full">
+        <div className="container mx-auto px-4 md:px-6 h-full flex items-center justify-start md:justify-center">
+          <div className="flex items-center justify-start md:justify-center overflow-x-auto no-scrollbar gap-6 md:gap-8 w-full py-2">
             {categories.map((category) => (
               <button
 
