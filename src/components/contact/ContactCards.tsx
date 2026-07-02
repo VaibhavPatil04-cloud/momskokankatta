@@ -5,16 +5,16 @@ const infoItems = [
   {
     icon: MapPin,
     title: "Our Location",
-    content: "2nd Floor, Viraj Vertex, Near BYK College, College Road, Nashik",
+    content: "Gat No. 95, Dasak Shiwar, Jatra, Nandur Link Road, Nashik",
     action: "Get Directions",
     link: "https://maps.google.com"
   },
   {
     icon: Phone,
     title: "Phone & Email",
-    content: "+91 98765 43210\ninfo@vrundavanhotel.com",
+    content: "+91 98220 98340\ninfo@momskokankatta.com",
     action: "Call Now",
-    link: "tel:+919876543210"
+    link: "tel:+919822098340"
   },
   {
     icon: Clock,

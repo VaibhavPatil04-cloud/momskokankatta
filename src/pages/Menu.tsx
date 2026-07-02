@@ -29,25 +29,39 @@ const Menu = () => {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const categoryIds = categories.map(cat => cat.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-'));
-      let current = activeCategory;
-
-      for (const id of categoryIds) {
-        const element = document.getElementById(id);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 200) {
-            current = categories[categoryIds.indexOf(id)];
-          }
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      const visibleEntries = entries.filter(entry => entry.isIntersecting);
+      if (visibleEntries.length > 0) {
+        // Find the entry that takes up the most space on screen
+        visibleEntries.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        const activeId = visibleEntries[0].target.id;
+        
+        const currentCategory = categories.find(
+          cat => cat.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-') === activeId
+        );
+        
+        if (currentCategory) {
+          setActiveCategory(currentCategory);
         }
       }
-      setActiveCategory(current);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [categories, activeCategory]);
+    const observerOptions = {
+      root: null,
+      rootMargin: "-200px 0px -40% 0px", // Adjust margins to trigger nicely when scrolling below sticky header
+      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1], // Multiple thresholds for accurate ratio
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    
+    categories.forEach(category => {
+      const id = category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-');
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [categories]);
 
   return (
     <div className="min-h-screen bg-[#0b0b0b]">

@@ -6,50 +6,50 @@
 
 @layer base {
   :root {
-    --background: 0 0% 6%;
-    --foreground: 0 0% 100%;
+    --background: 155 42% 10%;
+    --foreground: 43 100% 95%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 100%;
+    --card: 155 42% 15%;
+    --card-foreground: 43 100% 95%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 155 42% 12%;
+    --popover-foreground: 43 100% 95%;
 
-    --primary: 39 42% 55%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 161 82% 24%;
+    --primary-foreground: 43 100% 95%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 155 42% 18%;
+    --secondary-foreground: 43 100% 95%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 155 42% 18%;
+    --muted-foreground: 155 20% 70%;
 
-    --accent: 39 42% 55%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 46 65% 52%;
+    --accent-foreground: 155 42% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 39 42% 55%;
+    --border: 155 42% 20%;
+    --input: 155 42% 20%;
+    --ring: 46 65% 52%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 6%;
-    --sidebar-foreground: 0 0% 60%;
-    --sidebar-primary: 39 42% 55%;
-    --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 0 0% 12%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 39 42% 55%;
+    --sidebar-background: 155 42% 12%;
+    --sidebar-foreground: 43 100% 95%;
+    --sidebar-primary: 161 82% 24%;
+    --sidebar-primary-foreground: 43 100% 95%;
+    --sidebar-accent: 155 42% 18%;
+    --sidebar-accent-foreground: 43 100% 95%;
+    --sidebar-border: 155 42% 20%;
+    --sidebar-ring: 46 65% 52%;
 
     /* Custom tokens */
-    --gold: 39 42% 55%;
-    --gold-rgb: 201, 168, 106;
-    --surface: 0 0% 10%;
-    --obsidian: 0 0% 6%;
+    --gold: 46 65% 52%;
+    --gold-rgb: 212, 175, 55;
+    --surface: 155 42% 12%;
+    --obsidian: 155 42% 8%;
   }
 }
 

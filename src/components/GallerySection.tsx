@@ -5,16 +5,16 @@ import gallery1 from "@/assets/gallery1.jpg";
 import gallery2 from "@/assets/gallery2.jpg";
 import gallery3 from "@/assets/gallery3.jpg";
 import gallery4 from "@/assets/gallery4.jpg";
-import hero2 from "@/assets/hero2.png";
-import featureDining from "@/assets/feature-dining.jpg";
+import tableImg from "@/assets/table.png";
+import table2Img from "@/assets/table2.png";
 
 const images = [
-  { src: gallery1, span: "col-span-2 row-span-1", title: "Dining Experience" },
-  { src: gallery2, span: "col-span-1 row-span-2", title: "Warm Ambience" },
-  { src: gallery3, span: "col-span-1 row-span-1", title: "Signature Dishes" },
-  { src: gallery4, span: "col-span-1 row-span-1", title: "Luxury Interior" },
-  { src: hero2, span: "col-span-1 row-span-1", title: "Chef's Selection" },
-  { src: featureDining, span: "col-span-1 row-span-1", title: "Elegant Seating" },
+  { src: gallery1, span: "col-span-2 row-span-1", title: "Live Seafood Kitchen" },
+  { src: gallery2, span: "col-span-1 row-span-2", title: "Traditional Bamboo Interiors" },
+  { src: tableImg, span: "col-span-1 row-span-1", title: "Signature Fish Thali" },
+  { src: gallery4, span: "col-span-1 row-span-1", title: "Outdoor Dining under Palms" },
+  { src: table2Img, span: "col-span-1 row-span-1", title: "Premium Family Seating" },
+  { src: gallery3, span: "col-span-1 row-span-1", title: "Fresh Catch of the Day" },
 ];
 
 const GallerySection = () => {
@@ -86,7 +86,7 @@ const GallerySection = () => {
                   transition={isMobile ? { duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] } : undefined}
                   className="font-body text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-1"
                 >
-                  Vrundavan
+                  Mom's Kokan Katta
                 </motion.span>
                 <motion.h3
                   variants={{

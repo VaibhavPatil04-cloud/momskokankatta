@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import ourstory6 from "@/assets/ourstory6.png";
+import hero2 from "@/assets/hero2.png";
 
 const AboutHero = () => {
   return (
@@ -7,7 +7,7 @@ const AboutHero = () => {
       {/* Background Image with Parallax-ready structure */}
       <div className="absolute inset-0 z-0">
         <img
-          src={ourstory6}
+          src={hero2}
           alt="Restaurant Ambience"
           className="w-full h-full object-cover scale-105"
         />

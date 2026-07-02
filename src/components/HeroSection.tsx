@@ -1,15 +1,15 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import heroImg from "@/assets/hero.png";
 import hero1Img from "@/assets/hero1.png";
 import hero2Img from "@/assets/hero2.png";
+import hero3Img from "@/assets/hero3.png";
 import { Star } from "lucide-react";
 
 const slides = [
-  { image: heroImg, title: "Every Bite.\nA New Experience.", subtitle: "Indulge your senses with our carefully curated menu.", cta: "Book Your Experience", href: "/reserve" },
-  { image: hero1Img, title: "A Place to\nRelax & Enjoy.", subtitle: "Unwind in an atmosphere of unparalleled elegance and warmth.", cta: "Visit Us", href: "/contact" },
-  { image: hero2Img, title: "Great Food.\nGreat Company.", subtitle: "Experience authentic flavors in a premium setting.", cta: "View Menu", href: "/menu" }
+  { image: hero1Img, title: "Authentic Kokan\nSeafood Experience.", subtitle: "Indulge your senses with fresh catch and traditional Malvani flavors.", cta: "Book Your Table", href: "/reserve" },
+  { image: hero2Img, title: "A Premium Family\nDining Destination.", subtitle: "Enjoy a warm coastal atmosphere with traditional bamboo and boat decor.", cta: "Visit Us", href: "/contact" },
+  { image: hero3Img, title: "Generational Recipes.\nUnmatched Taste.", subtitle: "Experience the true essence of coastal cuisine in a nature-inspired setting.", cta: "Explore Menu", href: "/menu" }
 ];
 
 const HeroSection = () => {
@@ -47,7 +47,7 @@ const HeroSection = () => {
           >
             <img
               src={s.image}
-              alt={`Vrundavan Hotel - Background ${index + 1}`}
+              alt={`Mom's Kokan Katta - Background ${index + 1}`}
               className="w-full h-full object-cover"
               loading="eager"
             />

@@ -7,8 +7,8 @@ import GallerySection from "@/components/GallerySection";
 import ExperienceSection from "@/components/ExperienceSection";
 import CTASection from "@/components/CTASection";
 import ContactPreview from "@/components/ContactPreview";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
-import GudhiPadwaCelebration from "@/components/GudhiPadwaCelebration";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
@@ -18,11 +18,11 @@ const Index = () => (
     <AboutSection />
     <MenuPreview />
     <GallerySection />
+    <TestimonialsSection />
     <ExperienceSection />
     <CTASection />
     <ContactPreview />
     <Footer />
-    <GudhiPadwaCelebration />
   </div>
 );
 

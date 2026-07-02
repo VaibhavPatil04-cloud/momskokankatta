@@ -57,7 +57,7 @@ const ExperienceSection = () => (
           transition={{ delay: 0.3, duration: 1 }}
           className="font-display text-4xl sm:text-5xl lg:text-7xl italic font-medium text-[#f5f5f5] tracking-tight leading-[1.2] max-w-5xl mx-auto drop-shadow-2xl mb-20"
         >
-          "Where every meal becomes a memory, and every visit feels like coming home."
+          "Where every meal is a celebration of authentic coastal flavors, and every visit feels like a Konkani home."
         </motion.h2>
 
         {/* Brand CTA Button - Premium Style Consistency */}

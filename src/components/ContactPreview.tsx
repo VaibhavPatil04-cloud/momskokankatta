@@ -28,7 +28,7 @@ const ContactPreview = () => (
       >
         <p className="font-body text-sm uppercase tracking-[0.4em] text-primary mb-4 font-medium italic">Get In Touch</p>
         <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white mb-6">
-          Visit Vrundavan
+          Visit Mom's Kokan Katta
         </h2>
         <div className="w-24 h-[1px] bg-primary/30 mx-auto" />
       </motion.div>
@@ -50,8 +50,8 @@ const ContactPreview = () => (
               <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </div>
             <h3 className="font-display text-2xl font-semibold text-white mb-4">Location</h3>
-            <p className="font-body text-lg text-gray-300 leading-relaxed mb-1">123 Heritage Road</p>
-            <p className="font-body text-gray-400 mb-10">Mumbai, Maharashtra 400001</p>
+            <p className="font-body text-lg text-gray-300 leading-relaxed mb-1">Gat No. 95, Nandur Link Road</p>
+            <p className="font-body text-gray-400 mb-10">Nashik, Maharashtra 422003</p>
 
             <div className="mt-auto">
               <Link to="/contact" className="w-full sm:w-auto">
@@ -82,8 +82,8 @@ const ContactPreview = () => (
               <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </div>
             <h3 className="font-display text-xl font-semibold text-white mb-4">Phone</h3>
-            <p className="font-body text-gray-300 mb-1">+91 98765 43210</p>
-            <p className="font-body text-gray-400 text-sm mb-10">info@vrundavan.com</p>
+            <p className="font-body text-gray-300 mb-1">+91 98220 98340</p>
+            <p className="font-body text-gray-400 text-sm mb-10">info@momskokankatta.com</p>
 
             <div className="mt-auto">
               <Link to="/contact" className="w-full sm:w-auto">

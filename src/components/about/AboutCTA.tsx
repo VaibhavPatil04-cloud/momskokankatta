@@ -14,7 +14,7 @@ const AboutCTA = () => {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         >
           <h2 className="font-display text-4xl sm:text-5xl md:text-7xl font-semibold text-white mb-16 tracking-tight">
-            Come Experience <br /> Vrundavan
+            Come Experience <br /> Mom's Kokan Katta
           </h2>
 
           <motion.a

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -10,6 +10,7 @@ interface MenuNavProps {
 
 const MenuNav = ({ categories, activeCategory, onCategoryClick }: MenuNavProps) => {
   const [isSticky, setIsSticky] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +19,17 @@ const MenuNav = ({ categories, activeCategory, onCategoryClick }: MenuNavProps) 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const activeBtn = document.getElementById(`nav-category-${activeCategory.replace(/\s+/g, '-')}`);
+    if (activeBtn && scrollContainerRef.current) {
+      activeBtn.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest"
+      });
+    }
+  }, [activeCategory]);
 
   return (
     <div className="w-full h-0 relative z-40">
@@ -35,15 +47,18 @@ const MenuNav = ({ categories, activeCategory, onCategoryClick }: MenuNavProps) 
             : "opacity-0 pointer-events-none bg-transparent border-b border-transparent"
         )}
       >
-        <div className="container mx-auto px-4 md:px-6 h-full flex items-center justify-start md:justify-center">
-          <div className="flex items-center justify-start md:justify-center overflow-x-auto no-scrollbar gap-6 md:gap-8 w-full py-2">
+        <div className="container mx-auto px-4 md:px-6 h-full flex items-center justify-start">
+          <div 
+            ref={scrollContainerRef}
+            className="flex items-center justify-start overflow-x-auto gap-6 md:gap-8 w-full py-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] scroll-smooth"
+          >
             {categories.map((category) => (
               <button
-
                 key={category}
+                id={`nav-category-${category.replace(/\s+/g, '-')}`}
                 onClick={() => onCategoryClick(category)}
                 className={cn(
-                  "whitespace-nowrap font-body text-xs md:text-sm uppercase tracking-[0.2em] transition-all duration-300 relative py-2 px-1",
+                  "whitespace-nowrap font-body text-xs md:text-sm uppercase tracking-[0.2em] transition-all duration-300 relative py-2 px-1 flex-shrink-0",
                   activeCategory === category
                     ? "text-primary font-bold"
                     : "text-gray-400 hover:text-white"

@@ -53,11 +53,11 @@ const Footer = () => (
 
           {/* CENTER: Brand Identity */}
           <div className="p-10 lg:p-14 text-center flex flex-col items-center justify-center bg-white/[0.02]">
-            <img src={logo} alt="Vrundavan Logo" className="h-20 sm:h-24 w-auto mb-8 drop-shadow-[0_0_15px_rgba(201,168,106,0.2)]" />
-            <p className="font-body text-xs lg:text-sm text-primary uppercase tracking-[0.5em] mb-8 font-medium italic">Traditional Excellence</p>
+            <img src={logo} alt="Mom's Kokan Katta Logo" className="h-20 sm:h-24 w-auto mb-8 drop-shadow-[0_0_15px_rgba(201,168,106,0.2)]" />
+            <p className="font-body text-xs lg:text-sm text-primary uppercase tracking-[0.5em] mb-8 font-medium italic">Authentic Seafood</p>
 
             <div className="space-y-4 mb-10">
-              <p className="font-body text-sm text-gray-300 tracking-wide max-w-xs mx-auto">123 Heritage Road, Mumbai, MH</p>
+              <p className="font-body text-sm text-gray-300 tracking-wide max-w-xs mx-auto">Gat No. 95, Nandur Link Road, Nashik, MH</p>
               <div className="w-8 h-[1px] bg-white/10 mx-auto" />
               <p className="font-body text-xs text-gray-400 tracking-widest uppercase">Mon – Sun: 11 AM – 11 PM</p>
             </div>
@@ -83,7 +83,7 @@ const Footer = () => (
               {[
                 { icon: MessageCircle, name: "WhatsApp Chat", href: "#", color: "hover:text-green-400" },
                 { icon: Instagram, name: "Our Instagram", href: "#", color: "hover:text-pink-400" },
-                { icon: Phone, name: "+91 98765 43210", href: "#", color: "hover:text-primary" },
+                { icon: Phone, name: "+91 98220 98340", href: "#", color: "hover:text-primary" },
                 { icon: Mail, name: "Send an Email", href: "#", color: "hover:text-primary" },
               ].map((item) => (
                 <a
@@ -104,7 +104,7 @@ const Footer = () => (
       {/* BOTTOM STRIP */}
       <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-6 px-4">
         <p className="font-body text-[10px] uppercase tracking-[0.4em] text-gray-500">
-          © 2026 Vrundavan Hotel. All rights reserved.
+          © 2026 Mom's Kokan Katta. All rights reserved.
         </p>
         <div className="flex items-center gap-2">
           <p className="font-body text-[10px] uppercase tracking-[0.4em] text-gray-400">

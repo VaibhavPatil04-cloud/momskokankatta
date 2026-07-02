@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const CTASection = () => {
-  const highlights = ["Family Friendly", "Authentic Taste", "Quick Service", "Premium Ambience"];
+  const highlights = ["Family Friendly", "Authentic Malvani", "Fresh Seafood", "Coastal Ambience"];
 
   return (
     <section className="relative w-full overflow-hidden bg-gradient-to-b from-[#0b0b0b] via-[#111111] to-[#0b0b0b] py-[140px] lg:py-[180px] px-6">

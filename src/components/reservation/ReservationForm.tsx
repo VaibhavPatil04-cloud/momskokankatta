@@ -22,6 +22,7 @@ const ReservationForm = () => {
     persons: "2",
     date: "",
     time: "",
+    occasion: "Family Dinner",
     requests: ""
   });
 
@@ -115,6 +116,20 @@ const ReservationForm = () => {
                 onChange={(e) => setFormData({ ...formData, time: e.target.value })}
                 required
               />
+            </div>
+            {/* Occasion */}
+            <div className="relative">
+              <label className={labelClasses("occasion", "selected")}>Booking Reason</label>
+              <select
+                className={cn(inputClasses("occasion"), "appearance-none cursor-pointer")}
+                onFocus={() => setFocusedField("occasion")}
+                onBlur={() => setFocusedField(null)}
+                onChange={(e) => setFormData({ ...formData, occasion: e.target.value })}
+              >
+                {["Family Dinner", "Birthday", "Corporate", "Kitty Party", "Seafood Night", "Weekend Dinner", "Private Dining"].map(reason => (
+                  <option key={reason} value={reason} className="bg-[#111]">{reason}</option>
+                ))}
+              </select>
             </div>
           </div>
 

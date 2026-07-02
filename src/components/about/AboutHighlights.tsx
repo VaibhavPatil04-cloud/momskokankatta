@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Star, Heart, Coffee, Shield } from "lucide-react";
 
 const highlights = [
-  { icon: Shield, title: "Authentic Recipes", desc: "Generational secrets preserved in every dish." },
+  { icon: Shield, title: "Authentic Recipes", desc: "Generational Konkan secrets preserved in every dish." },
   { icon: Heart, title: "Family Friendly", desc: "A warm atmosphere where memories are made." },
-  { icon: Star, title: "Premium Ambience", desc: "Elegance met with effortless Indian warmth." },
-  { icon: Coffee, title: "Quick Service", desc: "Respecting your time without compromising quality." }
+  { icon: Star, title: "Premium Ambience", desc: "Nature-inspired outdoor seating and bamboo decor." },
+  { icon: Coffee, title: "Fresh Ingredients", desc: "Only the freshest catch and hand-ground Malvani spices." }
 ];
 
 const AboutHighlights = () => {

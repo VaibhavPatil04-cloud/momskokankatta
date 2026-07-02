@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import ourstory5 from "@/assets/ourstory5.png";
+import ourstoryImg from "@/assets/ourstory.png";
 
 const AboutStory = () => {
   return (
@@ -16,7 +16,7 @@ const AboutStory = () => {
             className="relative rounded-[32px] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.6)]"
           >
             <motion.img
-              src={ourstory5}
+              src={ourstoryImg}
               alt="Where It All Began"
               className="w-full h-full object-cover aspect-[4/5]"
               whileHover={{ scale: 1.05 }}
@@ -41,10 +41,10 @@ const AboutStory = () => {
 
             <div className="space-y-8">
               <p className="font-body text-gray-300 text-lg leading-relaxed font-light">
-                Our legacy started as a small dream to serve authentic, soul-satisfying Indian flavors in an atmosphere that feels like home. Over generations, we have perfected the recipes that were passed down, ensuring every spice is measured with love.
+                Our legacy started as a small dream to serve authentic, soul-satisfying Konkani and Malvani seafood in a premium family atmosphere. With outdoor dining under palm trees and traditional bamboo interiors, we've created a coastal haven in Nashik.
               </p>
               <p className="font-body text-gray-400 text-base leading-relaxed font-light">
-                Today, Vrundavan stands as a beacon of culinary excellence, blending traditional heritage with modern sophistication. Every corner of our space tells a story of perseverance, community, and the simple joy of a shared meal.
+                Today, Mom's Kokan Katta stands as a beacon of culinary excellence, bringing you the freshest catch cooked by experienced chefs. Every corner of our space tells a story of warm hospitality, traditional recipes, and the simple joy of a shared family meal.
               </p>
             </div>
 

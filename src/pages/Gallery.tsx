@@ -4,8 +4,8 @@ import GalleryHero from "@/components/gallery/GalleryHero";
 import GalleryGrid from "@/components/gallery/GalleryGrid";
 import GalleryBreak from "@/components/gallery/GalleryBreak";
 import GalleryCTA from "@/components/gallery/GalleryCTA";
-import ourstory4 from "@/assets/ourstory4.png";
-import ourstory3 from "@/assets/ourstory3.png";
+import about1 from "@/assets/about1.png";
+import about2 from "@/assets/about2.png";
 
 const Gallery = () => {
   return (
@@ -16,12 +16,12 @@ const Gallery = () => {
         <GalleryGrid />
         
         <GalleryBreak 
-          image={ourstory4} 
+          image={about1} 
           title="The Warmth of Tradition" 
         />
         
         <GalleryBreak 
-          image={ourstory3} 
+          image={about2} 
           title="Crafted Moments" 
         />
         

@@ -6,9 +6,9 @@ import dish2 from "@/assets/dish2.jpg";
 import dish3 from "@/assets/dish3.jpg";
 
 const dishes = [
-  { id: "paneer-butter-masala", image: dish1, name: "Paneer Butter Masala", desc: "Rich, creamy tomato-based curry with soft paneer cubes" },
-  { id: "veg-kolhapuri", image: dish2, name: "Veg Kolhapuri", desc: "Spicy Maharashtrian curry packed with bold flavors" },
-  { id: "paneer-tikka-masala", image: dish3, name: "Misal Pav", desc: "Authentic spicy street-style curry with crunchy farsan" },
+  { id: "fish-thali", image: dish1, name: "Fish Thali", desc: "Authentic Kokan style complete meal with fresh catch" },
+  { id: "prawns-crispy", image: dish2, name: "Prawns Crispy", desc: "Golden fried juicy prawns with our signature spice blend" },
+  { id: "surmai-fry", image: dish3, name: "Surmai Fry", desc: "Classic Malvani style shallow fried fresh Kingfish" },
 ];
 
 const FeaturedDishes = () => {
@@ -89,7 +89,7 @@ const FeaturedDishes = () => {
             Our Specialties
           </p>
           <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-white drop-shadow-lg">
-            A Taste of Vrundavan
+            A Taste of Mom's Kokan Katta
           </h2>
         </motion.div>
 

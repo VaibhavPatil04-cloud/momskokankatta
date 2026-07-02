@@ -1,10 +1,5 @@
 import { motion } from "framer-motion";
-
-interface MenuItem {
-  name: string;
-  price: number;
-  desc?: string;
-}
+import { MenuItem } from "@/data/menuData";
 
 interface MenuCategoryProps {
   title: string;

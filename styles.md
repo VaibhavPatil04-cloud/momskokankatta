@@ -1,6 +1,6 @@
-# Hotel Vrindavan - Website Design & Structure
+# Mom's Kokan Katta - Website Design & Structure
 
-Based on a deep analysis for the , here is a comprehensive breakdown of the design system, structure, and styling of the **Hotel Vrindavan** website. 
+Based on a deep analysis for the , here is a comprehensive breakdown of the design system, structure, and styling of the **Mom's Kokan Katta** website. 
 
 The website exudes a **premium, elegant, and sophisticated** fine-dining vibe. The design is modern, relying heavily on high-quality imagery, a rich color palette, and classic typography.
 

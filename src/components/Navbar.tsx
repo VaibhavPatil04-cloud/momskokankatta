@@ -35,7 +35,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center">
           <img 
             src={logo} 
-            alt="Vrundavan Logo" 
+            alt="Mom's Kokan Katta Logo" 
             className={`transition-all duration-500 object-contain ${
               scrolled ? "h-[75px]" : "h-[100px]"
             }`} 

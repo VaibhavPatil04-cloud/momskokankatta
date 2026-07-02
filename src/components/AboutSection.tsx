@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import story6 from "@/assets/ourstory6.png";
-import story1 from "@/assets/ourstory1.png";
+import about1Img from "@/assets/about1.png";
+import about2Img from "@/assets/about2.png";
 
 const AboutSection = () => {
   const containerVariants = {
@@ -47,7 +47,7 @@ const AboutSection = () => {
             {/* Main Image Block */}
             <div className="relative rounded-[28px] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.7)] aspect-[4/5] lg:aspect-[4/5.5]">
               <motion.img
-                src={story6}
+                src={about1Img}
                 alt="Restaurant Ambience"
                 className="w-full h-full object-cover"
                 whileHover={{ scale: 1.08, x: 5 }}
@@ -74,7 +74,7 @@ const AboutSection = () => {
                 whileHover={{ scale: 1.05, rotate: 1 }}
                 className="rounded-[20px] overflow-hidden border-[6px] border-[#080808] shadow-[0_30px_70px_rgba(0,0,0,0.8)] aspect-[3/4]"
               >
-                <img src={story1} alt="Dining Detail" className="w-full h-full object-cover" />
+                <img src={about2Img} alt="Dining Detail" className="w-full h-full object-cover" />
               </motion.div>
             </motion.div>
 
@@ -107,10 +107,10 @@ const AboutSection = () => {
 
             <motion.div variants={itemVariants} className="space-y-8 mb-12">
               <p className="font-body text-xl lg:text-2xl text-gray-200 leading-relaxed font-light font-display italic">
-                Crafting moments of culinary magic through generations of tradition and a passion for modern Indian excellence.
+                Crafting moments of culinary magic through generations of coastal traditions and a passion for authentic Malvani seafood.
               </p>
               <p className="font-body text-base lg:text-lg text-gray-400 leading-[1.9] font-light max-w-xl">
-                Every dish we serve is a chapter in our legacy, blending the warmth of traditional spices with the elegance of contemporary fine dining. We invite you to lose yourself in the textures, aromas, and stories of Vrundavan.
+                Every dish we serve is a chapter in our legacy, blending the warmth of traditional Konkan spices with the elegance of premium family dining. We invite you to lose yourself in the textures, aromas, and stories of Mom's Kokan Katta.
               </p>
             </motion.div>
 

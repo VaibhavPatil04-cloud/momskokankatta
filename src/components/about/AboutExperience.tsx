@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import ourstory1 from "@/assets/ourstory1.png";
+import about1 from "@/assets/about1.png";
 
 const AboutExperience = () => {
   return (
@@ -7,7 +7,7 @@ const AboutExperience = () => {
       {/* Background Texture/Overlay */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <img
-          src={ourstory1}
+          src={about1}
           alt="Texture"
           className="w-full h-full object-cover grayscale blur-sm"
         />

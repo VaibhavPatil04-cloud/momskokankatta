@@ -12,7 +12,7 @@ const ContactCTA = () => {
           transition={{ duration: 1 }}
         >
           <h2 className="font-display text-4xl md:text-6xl text-white mb-8 tracking-tight font-medium">
-            Visit Vrundavan Today
+            Visit Mom's Kokan Katta Today
           </h2>
           <p className="font-body text-gray-400 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
             Experience the culinary heritage of Nashik in an ambience of luxury.

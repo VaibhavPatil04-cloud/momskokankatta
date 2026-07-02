@@ -5,28 +5,28 @@ import { UtensilsCrossed, Flame, Soup, Wheat } from "lucide-react";
 
 const categories = [
   {
-    icon: Soup,
-    label: "Soups",
-    count: "8 Items",
-    desc: "Warm and comforting starters made with fresh, locally sourced ingredients."
+    icon: UtensilsCrossed,
+    label: "Fish Thali",
+    count: "Signature",
+    desc: "Authentic Konkan thalis featuring fresh catch, bhakri, and solkadhi."
   },
   {
     icon: Flame,
-    label: "Starters",
-    count: "14 Items",
-    desc: "Crispy, spicy, and perfectly seasoned bites to kickstart your meal."
+    label: "Coastal Starters",
+    count: "Spicy & Crispy",
+    desc: "Crispy Bombil, fiery prawns, and authentic bites to kickstart your meal."
   },
   {
-    icon: UtensilsCrossed,
-    label: "Main Course",
-    count: "22 Items",
-    desc: "Authentic Indian curries and specialties slow-cooked to perfection."
+    icon: Soup,
+    label: "Seafood Curries",
+    count: "Malvani Style",
+    desc: "Fresh crabs and pomfret simmered in traditional coconut-based gravies."
   },
   {
     icon: Wheat,
-    label: "Biryani",
-    count: "6 Items",
-    desc: "Fragrant basmati rice layered with aromatic spices and tender choice of meat or veg."
+    label: "Rice & Breads",
+    count: "Traditional",
+    desc: "Aromatic biryanis, neer dosa, and authentic hand-rolled bhakris."
   },
 ];
 

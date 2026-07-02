@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import ourstory6 from "@/assets/ourstory6.png";
+import hero1 from "@/assets/hero1.png";
 
 const GalleryHero = () => {
   return (
@@ -10,7 +10,7 @@ const GalleryHero = () => {
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 2.5, ease: "easeOut" }}
-          src={ourstory6}
+          src={hero1}
           alt="Gallery Background"
           className="w-full h-full object-cover"
         />

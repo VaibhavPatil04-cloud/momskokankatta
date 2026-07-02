@@ -32,7 +32,7 @@ const ContactHero = () => {
           </h1>
           <div className="w-24 h-[1px] bg-primary/40 mx-auto mb-6" />
           <p className="font-body text-gray-300 text-lg md:text-xl max-w-2xl mx-auto font-light tracking-wide">
-            We’d love to welcome you at Vrundavan
+            We’d love to welcome you at Mom's Kokan Katta
           </p>
         </motion.div>
       </div>
